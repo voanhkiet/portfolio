@@ -30,11 +30,23 @@
   </header>
 
   <main>
+    <a href="#" id="scrollLink">Scroll to About</a>
     <section id="about" class="animate__animated animate__fadeIn">
       <h2>About Me</h2>
       <p>My name is kiet. I am a artist, i can painting and programing.</p>
     </section>
-
+    <script>
+        document.getElementById('scrollLink').addEventListener('click', function (event) {
+            event.preventDefault();
+             // Calculate the top offset of the target element
+            const targetOffset = document.getElementById('about').offsetTop;
+             window.scrollTo({
+             top: targetOffset,
+            behavior: 'smooth'
+            });
+    });
+    </script>
+    <button id="scrollButton">Scroll to Projects</button>
     <section id="projects">
       <h2>My Projects</h2>
       <div class="project-card">
@@ -43,7 +55,13 @@
       </div>
       <!-- You can add more project-cards as needed -->
     </section>
-
+    <script>
+        document.getElementById('scrollButton').addEventListener('click', function () {
+            document.getElementById('projects').scrollIntoView({
+            behavior: 'smooth'
+             });
+        });
+    </script>
     <section id="contact">
       <h2>Contact Me</h2>
       <form id="contactForm">
