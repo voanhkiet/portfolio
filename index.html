@@ -23,12 +23,51 @@
         <span></span>
       </div>
     </nav>
-    <section id="home" class="hero">
-      <h1>Hello, I'm Kiet</h1>
-      <p>Welcome to my portfolio website!</p>
-    </section>
+    
   </header>
+ <!-- Gallery Controls -->
+ <section class="gallery-controls">
+  <!-- Search Input -->
+  <input type="text" id="searchInput" placeholder="Search projects..." />
 
+  <!-- Category Filter Buttons -->
+  <div class="filter-buttons">
+    <button class="filter-btn active" data-filter="all">Show All</button>
+    <button class="filter-btn" data-filter="web">Web Design</button>
+    <button class="filter-btn" data-filter="graphic">Graphic Design</button>
+    <button class="filter-btn" data-filter="photography">Photography</button>
+  </div>
+</section>
+
+<!-- Gallery Items -->
+<section class="gallery" id="gallery">
+  <!-- Each gallery item includes a category class and a data-title attribute for search -->
+  <div class="gallery-item web" data-title="Portfolio Website">
+    <img src="images/web1.jpg" alt="Portfolio Website" />
+    <div class="caption">Portfolio Website</div>
+  </div>
+  <div class="gallery-item graphic" data-title="Brand Identity">
+    <img src="images/graphic1.jpg" alt="Brand Identity" />
+    <div class="caption">Brand Identity</div>
+  </div>
+  <div class="gallery-item photography" data-title="Nature Photography">
+    <img src="images/photo1.jpg" alt="Nature Photography" />
+    <div class="caption">Nature Photography</div>
+  </div>
+  <div class="gallery-item web" data-title="E-commerce Platform">
+    <img src="images/web2.jpg" alt="E-commerce Platform" />
+    <div class="caption">E-commerce Platform</div>
+  </div>
+  <div class="gallery-item graphic" data-title="Logo Design">
+    <img src="images/graphic2.jpg" alt="Logo Design" />
+    <div class="caption">Logo Design</div>
+  </div>
+  <div class="gallery-item photography" data-title="Cityscape">
+    <img src="images/photo2.jpg" alt="Cityscape" />
+    <div class="caption">Cityscape</div>
+  </div>
+  <!-- Add more projects as needed -->
+</section>
   <main>
     <a href="#" id="scrollLink">Scroll to About</a>
     <section id="about" class="animate__animated animate__fadeIn">
@@ -72,12 +111,4 @@
       </form>
       <p id="formResponse"></p>
     </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Kiet. All rights reserved.</p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+  

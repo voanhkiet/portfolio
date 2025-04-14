@@ -155,4 +155,113 @@ html {
     flex-direction: column;
   }
 }
-  
+
+/* Basic Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  padding: 20px;
+}
+
+/* Header Styling */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Gallery Controls */
+.gallery-controls {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Search Input */
+#searchInput {
+  padding: 10px;
+  font-size: 1rem;
+  width: 80%;
+  max-width: 400px;
+  display: block;
+  margin: 0 auto 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Filter Buttons */
+.filter-buttons {
+  display: inline-block;
+}
+
+.filter-btn {
+  padding: 10px 15px;
+  margin: 0 5px;
+  border: none;
+  background: #333;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: #e8491d;
+}
+
+/* Gallery Layout */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Gallery Items */
+.gallery-item {
+  background: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  width: calc(33.333% - 20px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  /* We leave display property for JavaScript to modify */
+}
+
+/* Hover Effect */
+.gallery-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Image Styling */
+.gallery-item img {
+  width: 100%;
+  display: block;
+}
+
+/* Caption Styling */
+.caption {
+  padding: 10px;
+  text-align: center;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .gallery-item {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-item {
+    width: 100%;
+  }
+}
