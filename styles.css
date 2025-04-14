@@ -1,9 +1,11 @@
 body {
   font-family: Arial, sans-serif;
+  height: 200vh; /* Increase scrollable are */
   line-height: 1.6;
   margin: 0;
   padding: 0;
   color: #333;
+  background: #f0f0f0;
 }
 
 header {
@@ -34,4 +36,27 @@ form input, form textarea, form button {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
+}
+.animated-box {
+  width: 150px;
+  height: 150px;
+  background-color: #2196f3;
+  margin: 150px auto;
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+#projects {
+  width: 300px;
+  padding: 20px;
+  margin: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#projects:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
